@@ -1,7 +1,7 @@
 import { RematchDispatch } from '@rematch/core'
 import { Dispatcher } from '../../store'
 
-export interface ICountState {
+interface ICountState {
   count: number;
   loading: boolean;
 }
@@ -18,6 +18,7 @@ export const count = {
     }
   },
   effects: (_dispatch: RematchDispatch<any>) => {
+    // This is a workaround for an type issue in the Rematch beta build 
     const dispatch = _dispatch as Dispatcher;
 
     return ({
