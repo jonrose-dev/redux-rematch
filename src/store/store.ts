@@ -5,6 +5,5 @@ export const store = init({
   models,
 })
 
-export type Store = typeof store
 export const { dispatch } = store;
 export type Dispatcher = typeof dispatch;

@@ -1,6 +1,7 @@
-import { IPersonState } from './person.model';
+import { IPersonState } from "./person.types";
 
-export const personAddressString = ({ person }:{person: IPersonState}) => {
+
+export const selectPersonAddressString = ({ person }: { person: IPersonState }) => {
   const { firstName, lastName, line1, line2, city, state } = person;
   const hasName = firstName && lastName;
   const fullName = `${firstName} ${lastName}`;

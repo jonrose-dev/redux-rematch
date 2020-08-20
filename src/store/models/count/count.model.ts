@@ -1,10 +1,6 @@
 import { RootModel } from '../models';
 import { RematchDispatch } from '../../legacy-types';
-
-interface ICountState {
-  count: number;
-  loading: boolean;
-}
+import { ICountState } from './count.types';
 
 export const count = {
   state: { count: 0, loading: false } as ICountState, // initial state
