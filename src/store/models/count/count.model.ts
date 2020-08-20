@@ -1,7 +1,7 @@
 import { RootModel } from '../models';
 import { RematchDispatch } from '../../legacy-types';
 
-export interface ICountState {
+interface ICountState {
   count: number;
   loading: boolean;
 }
