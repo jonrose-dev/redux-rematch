@@ -7,10 +7,42 @@
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding: 1rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form button {
+  margin: 1rem;
+  width: fit-content;
+  align-self: center;
+  justify-content: center;
+}
+
+form > label {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 0.5rem;
+  align-self: center;
+  align-items: center;
+  margin: 0.5rem;
+  width: 100%
+}
+
+form > label > span {
+  justify-self: flex-end;
+}
+
+form > label > input {
+  height: 1.25rem;
+  width: 300px;
 }
