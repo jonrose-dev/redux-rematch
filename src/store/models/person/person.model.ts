@@ -1,6 +1,6 @@
 
 import { RematchDispatch } from '../../legacy-types';
-import { RootModel } from '../models';
+import { RootModel } from '..';
 import { IPersonState, IPerson } from './person.types';
 
 

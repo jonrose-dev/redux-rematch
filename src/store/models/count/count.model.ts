@@ -1,4 +1,4 @@
-import { RootModel } from '../models';
+import { RootModel } from '..';
 import { RematchDispatch } from '../../legacy-types';
 import { ICountState } from './count.types';
 
