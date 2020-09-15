@@ -4,7 +4,7 @@ import { useRematch, useRematchLoading } from 'src/store/useRematch';
 
 export const Person = () => {
   const addressString = useRematch(selectPersonAddressString);
-  const loading = useRematchLoading((state) => state.loading?.models.person);
+  const loading = useRematchLoading((state) => state.loading.models.person);
   return(
     <div>
       <p>Person</p>

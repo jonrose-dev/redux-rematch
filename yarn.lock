@@ -1298,10 +1298,10 @@
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.3.tgz#2b5a3ab3f918cca48a8c754c08168e3f03eba61b"
   integrity sha512-shAmDyaQC4H92APFoIaVDHCx5bStIocgvbwQyxPRrbUY20V1EYTbSDchWbuwlMG3V17cprZhA6+78JfB+3DTPw==
 
-"@rematch/core@^2.0.0-next.2":
-  version "2.0.0-next.2"
-  resolved "https://registry.yarnpkg.com/@rematch/core/-/core-2.0.0-next.2.tgz#b593099d6513ec76c4e42cce3c553b07cb9f52bf"
-  integrity sha512-mFpamBlk1nPQQ0iRsEGDGEQzTtdMgpvWABoYq48b63hA9mQphcyog3G4x0Fcn4wcv8YDRNQHtW8p8mFJskza9g==
+"@rematch/core@^2.0.0-next.5":
+  version "2.0.0-next.5"
+  resolved "https://registry.yarnpkg.com/@rematch/core/-/core-2.0.0-next.5.tgz#ddb42679a39cd4d125e948caa4e3e39d62651178"
+  integrity sha512-cmaE7UV4ckmuOBHRdKyDvb1SVVlaaSIuM3qYviEQn9zdpLVseFcsbSZfTbHMPVw5TLOa/eHdOxUoEfkVDTXKLQ==
 
 "@rematch/loading@^2.0.0-next.5":
   version "2.0.0-next.5"

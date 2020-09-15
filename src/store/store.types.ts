@@ -1,5 +1,11 @@
-import { RematchRootState } from "@rematch/core";
-import { models } from "./models";
+import { ExtractRematchStateFromModels, RematchRootState } from "@rematch/core";
+import { models, RootModel } from "./models";
 
-
-export type RootState = RematchRootState<typeof models>;
+export interface LoadingPlugin {
+  loading: {
+    models: RematchRootState<typeof models>;
+    effects: RematchRootState<typeof models>;
+  }
+}
+export type ILoadingState = ExtractRematchStateFromModels<typeof models> & LoadingPlugin;
+export type RootState = RematchRootState<RootModel>
