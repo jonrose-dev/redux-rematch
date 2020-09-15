@@ -1,11 +1,17 @@
-import { ExtractRematchStateFromModels, RematchRootState } from "@rematch/core";
-import { models, RootModel } from "./models";
+import { ExtractRematchDispatchersFromEffects, RematchRootState } from "@rematch/core";
+import { RootModel } from "./models";
+
+
+
+type ExtractRematchDispatchersFromEffectsLoading<modelKey extends keyof RootModel> = {
+  [key in keyof ExtractRematchDispatchersFromEffects<RootModel[modelKey]['effects'], RootModel>]: boolean;
+}
 
 export interface LoadingPlugin {
   loading: {
-    models: RematchRootState<typeof models>;
-    effects: RematchRootState<typeof models>;
+    models: { [modelKey in keyof RootModel]: boolean };
+    effects: { [modelKey in keyof RootModel]: ExtractRematchDispatchersFromEffectsLoading<modelKey> }
   }
 }
-export type ILoadingState = ExtractRematchStateFromModels<typeof models> & LoadingPlugin;
-export type RootState = RematchRootState<RootModel>;
+
+export type RootState = RematchRootState<RootModel> & LoadingPlugin;
