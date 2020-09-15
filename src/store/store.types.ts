@@ -8,4 +8,4 @@ export interface LoadingPlugin {
   }
 }
 export type ILoadingState = ExtractRematchStateFromModels<typeof models> & LoadingPlugin;
-export type RootState = RematchRootState<RootModel>
+export type RootState = RematchRootState<RootModel>;
