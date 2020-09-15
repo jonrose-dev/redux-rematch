@@ -1,9 +1,10 @@
 import React from 'react';
 import { dispatch } from '../../store/store';
-import { useRematch } from '../../store/useRematch';
+import { useRematch, useRematchLoading } from '../../store/useRematch';
 
 export const Counter = () => {
-  const { count, loading } = useRematch((state) => state.count);
+  const { count } = useRematch((state) => state.count);
+  const loading = useRematchLoading((state) => state.loading?.models.count);
   const handleClick = () => {
     dispatch.count.increment(1)
   }

@@ -1303,6 +1303,11 @@
   resolved "https://registry.yarnpkg.com/@rematch/core/-/core-2.0.0-next.2.tgz#b593099d6513ec76c4e42cce3c553b07cb9f52bf"
   integrity sha512-mFpamBlk1nPQQ0iRsEGDGEQzTtdMgpvWABoYq48b63hA9mQphcyog3G4x0Fcn4wcv8YDRNQHtW8p8mFJskza9g==
 
+"@rematch/loading@^2.0.0-next.5":
+  version "2.0.0-next.5"
+  resolved "https://registry.yarnpkg.com/@rematch/loading/-/loading-2.0.0-next.5.tgz#4bae44d80998f4e9f9ecbf27069fbef06569d9f0"
+  integrity sha512-0qVbFM0qgNVbAMfgB3ClReJ/7FvycMrlyzf4K4aAue+yKod11dd3VrevdcjyJaBTnpbSxMn5DSxqvyxjikc4pA==
+
 "@sheerun/mutationobserver-shim@^0.3.2":
   version "0.3.3"
   resolved "https://registry.yarnpkg.com/@sheerun/mutationobserver-shim/-/mutationobserver-shim-0.3.3.tgz#5405ee8e444ed212db44e79351f0c70a582aae25"
