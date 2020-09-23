@@ -1,14 +1,16 @@
 import React from 'react';
-import { selectPersonAddressString } from 'src/store/models/person/person.selector';  
-import { useRematch } from 'src/store/useRematch';
+import { IAppStore } from '../../store/AppStore';
+import { observer } from "mobx-react";
+import { useStore } from "mobx-store-provider";
 
-export const Person = () => {
-  const addressString = useRematch(selectPersonAddressString);
-  const loading = useRematch((state) => state.loading.effects.person.updatePerson);
+export const PersonView = () => {
+  const appStore: IAppStore = useStore();
   return(
     <div>
       <p>Person</p>
-      <p>{loading ? 'Loading' : addressString}&#8203;</p>
+      <p>{appStore.isLoadingStore ? 'Loading' : appStore.person.addressFormatted}&#8203;</p>
     </div>
   )
 }
+
+export const Person = observer(PersonView);
