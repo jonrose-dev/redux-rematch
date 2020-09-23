@@ -1,25 +1,26 @@
 import React from 'react';
-import { dispatch } from '../../store/store';
-import { useRematch } from '../../store/useRematch';
+import { IAppStore } from '../../store/AppStore';
+import { observer } from "mobx-react";
+import { useStore } from "mobx-store-provider";
 
-export const Counter = () => {
-  const { count } = useRematch((state) => state.count);
-  const loading = useRematch((state) => state.loading.models.count);
-  
+export const CounterView = () => {
+  const appStore: IAppStore = useStore();
+
   const handleClick = () => {
-    dispatch.count.increment(1);
+    appStore.count.increment(1);
   }
   const handleClickAsync = () => {
-    dispatch.count.incrementAsync(10);
+    appStore.count.incrementAsync(10);
   }
-
   return (
     <div>
       <p>
-        { loading ? 'Loading' : <>Current Count: <code>{count}</code></>}
+        { appStore.count.isLoading ? 'Loading' : <>Current Count: <code>{appStore.count.count}</code></>}
       </p>
       <button type="button" onClick={handleClick}>Increment</button>
       <button type="button" onClick={handleClickAsync}>Async Increment</button>
     </ div>
   );
 }
+
+export const Counter = observer(CounterView);
