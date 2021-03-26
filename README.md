@@ -1,3 +1,6 @@
+Rematch Best Practices: https://docs.google.com/document/d/1G1_QxWYrjFhTgdoNJ7b6t4b0ZDOXcj-_aR9tOs8d0nY/edit
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
